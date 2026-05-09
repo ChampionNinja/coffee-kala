@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Subscriptions - कॉफ़ी_कला</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .grid-overlay {
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-on-background font-body-md overflow-x-hidden relative">
+    <!-- TopNavBar -->
+    <nav class="sticky top-0 z-50 w-full flex justify-between items-center px-6 py-4 bg-white border-b-4 border-black">
+        <div class="text-3xl md:text-4xl font-black tracking-tight font-['Yatra_One']">कॉफ़ी_कला</div>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="index.html">SHOP</a>
+            <a class="text-black border-b-2 border-black pb-1 font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="subscriptions.html">SUBSCRIPTIONS</a>
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="extraction.html">EXTRACTION</a>
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="locations.html">LOCATIONS</a>
+        </div>
+        <div class="flex gap-4">
+            <a href="profile.html" class="material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors">person</a>
+            <a href="cart.html" class="material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors relative">
+                shopping_cart
+                <span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">2</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full py-20 px-4 md:px-8 grid-overlay border-b-4 border-black bg-[#E8DCC8]">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                <div class="md:col-span-7">
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="w-2 h-2 bg-[#8B6F47] rounded-full"></span>
+                        <span class="font-['JetBrains_Mono'] text-[10px] uppercase tracking-widest text-stone-700">SYSTEM STATUS: OPTIMAL</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-black uppercase mb-4 font-['Space_Grotesk'] leading-[0.9] tracking-tight">
+                        ENGINEER YOUR<br/>RITUAL
+                    </h1>
+                    <p class="text-xl md:text-2xl text-stone-700 mb-10 font-['Space_Grotesk'] uppercase tracking-tight">
+                        AUTOMATED CAFFEINE DELIVERY
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-[#8B6F47] text-white px-8 py-4 font-['JetBrains_Mono'] text-[10px] uppercase tracking-[0.2em] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[3px] hover:translate-y-[3px] transition-all">
+                            BEGIN CALIBRATION
+                        </button>
+                        <div class="flex items-center gap-3 px-6 py-4 border-2 border-black bg-white/80">
+                            <span class="material-symbols-outlined text-[#8B6F47]">settings_input_component</span>
+                            <span class="font-['JetBrains_Mono'] text-[9px] uppercase tracking-wide">ACTIVE NODES: 1,240</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-5 relative flex justify-center items-center">
+                    <div class="w-full max-w-md aspect-square border-4 border-black relative overflow-hidden bg-white shadow-[12px_12px_0px_0px_rgba(139,111,71,1)]">
+                        <img alt="Coffee product" class="w-full h-full object-cover  contrast-125" src="./img/nathan-dumlao-Y3AqmbmtLQI-unsplash.jpg" />
+                        <div class="absolute inset-0 pointer-events-none border-[20px] border-[#E8DCC8]/30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subscription Plans -->
+    <section class="py-20 px-4 md:px-8 bg-white">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex justify-between items-end mb-16 flex-wrap gap-4">
+                <div>
+                    <span class="font-['JetBrains_Mono'] text-[10px] text-[#8B6F47] uppercase mb-2 block tracking-widest">OPERATIONAL PARAMETERS</span>
+                    <h2 class="text-4xl md:text-5xl font-black uppercase font-['Space_Grotesk']">SUBSCRIPTION NODES</h2>
+                </div>
+                <div class="font-['JetBrains_Mono'] text-[10px] uppercase font-bold text-stone-500 pb-2 border-b-2 border-black/20 tracking-widest">
+                    FREQUENCY: MONTHLY
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Starter Plan -->
+                <div class="bg-white border-2 border-black p-8 flex flex-col h-full hover:border-[#8B6F47] transition-colors group">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="font-['JetBrains_Mono'] text-[9px] uppercase bg-[#F5EDE0] px-3 py-1 tracking-widest">NODE 01</div>
+                        <span class="material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity">terminal</span>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-2 font-['Space_Grotesk']">STARTER NODE</h3>
+                    <div class="text-4xl font-black text-black mb-8">
+                        ₹899<span class="text-sm font-normal">/mo</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>1 Delivery/mo</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>500g Net Weight</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>Single Origin Selection</span>
+                        </li>
+                        <li class="text-stone-500 font-['JetBrains_Mono'] text-[9px] uppercase opacity-50 tracking-wide">
+                            Standard Priority Dispatch
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 border-2 border-black font-['JetBrains_Mono'] text-[10px] uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all">
+                        INITIALIZE
+                    </button>
+                </div>
+
+                <!-- Enthusiast Plan (Featured) -->
+                <div class="bg-white border-4 border-black p-8 flex flex-col h-full shadow-[8px_8px_0px_0px_rgba(139,111,71,1)] relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#8B6F47] text-white px-4 py-1 font-['JetBrains_Mono'] text-[9px] uppercase font-bold tracking-widest">
+                        RECOMMENDED
+                    </div>
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="font-['JetBrains_Mono'] text-[9px] uppercase bg-[#8B6F47] text-white px-3 py-1 tracking-widest">NODE 02</div>
+                        <span class="material-symbols-outlined text-[#8B6F47]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-2 font-['Space_Grotesk']">MAKER LOOP</h3>
+                    <div class="text-4xl font-black text-black mb-8">
+                        ₹1,599<span class="text-sm font-normal">/mo</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-3 text-sm font-bold">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>2 Deliveries/mo</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-bold">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>1kg Total Output</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>Curated Technical Blends</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>High Priority Processing</span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 bg-[#8B6F47] text-white font-['JetBrains_Mono'] text-[10px] uppercase tracking-[0.2em] hover:bg-[#6d5638] transition-all">
+                        EXECUTE PROTOCOL
+                    </button>
+                </div>
+
+                <!-- Connoisseur Plan -->
+                <div class="bg-white border-2 border-black p-8 flex flex-col h-full hover:border-[#8B6F47] transition-colors group">
+                    <div class="flex justify-between items-start mb-8">
+                        <div class="font-['JetBrains_Mono'] text-[9px] uppercase bg-[#F5EDE0] px-3 py-1 tracking-widest">NODE 03</div>
+                        <span class="material-symbols-outlined opacity-20 group-hover:opacity-100 transition-opacity">lock</span>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase mb-2 font-['Space_Grotesk']">BLACKOUT PROTOCOL</h3>
+                    <div class="text-4xl font-black text-black mb-8">
+                        ₹2,799<span class="text-sm font-normal">/mo</span>
+                    </div>
+                    <ul class="space-y-3 mb-8 flex-grow">
+                        <li class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>4 Deliveries/mo</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>2kg High-Volume Reserve</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>Archive Roast Access</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                            <span>Max Priority Dispatch</span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-4 border-2 border-black font-['JetBrains_Mono'] text-[10px] uppercase tracking-[0.2em] hover:bg-black hover:text-white transition-all">
+                        AUTHORIZE ACCESS
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 px-4 md:px-8 bg-[#F5EDE0] border-y-4 border-black">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <span class="font-['JetBrains_Mono'] text-[10px] uppercase text-stone-600 tracking-[0.2em] mb-2 block">SUPPLY CHAIN LOGISTICS</span>
+                <h2 class="text-4xl font-black uppercase font-['Space_Grotesk']">INSIDE THE SHIPMENT</h2>
+            </div>
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-black/10 -translate-y-1/2 -z-10"></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white border-2 border-black p-8 text-center relative">
+                        <div class="w-16 h-16 bg-[#8B6F47] text-white flex items-center justify-center mx-auto mb-6 border-2 border-black">
+                            <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+                        </div>
+                        <h4 class="font-['JetBrains_Mono'] text-[10px] uppercase font-bold mb-3 tracking-widest">ROAST PREP</h4>
+                        <p class="text-sm text-stone-600">Precise thermal regulation and batch profiling for maximum chemical stability.</p>
+                    </div>
+                    <div class="bg-white border-2 border-black p-8 text-center relative">
+                        <div class="w-16 h-16 bg-[#8B6F47] text-white flex items-center justify-center mx-auto mb-6 border-2 border-black">
+                            <span class="material-symbols-outlined text-3xl">biotech</span>
+                        </div>
+                        <h4 class="font-['JetBrains_Mono'] text-[10px] uppercase font-bold mb-3 tracking-widest">CALIBRATION</h4>
+                        <p class="text-sm text-stone-600">Sensory analysis and moisture equilibrium testing before vacuum sealing.</p>
+                    </div>
+                    <div class="bg-white border-2 border-black p-8 text-center relative">
+                        <div class="w-16 h-16 bg-[#8B6F47] text-white flex items-center justify-center mx-auto mb-6 border-2 border-black">
+                            <span class="material-symbols-outlined text-3xl">local_shipping</span>
+                        </div>
+                        <h4 class="font-['JetBrains_Mono'] text-[10px] uppercase font-bold mb-3 tracking-widest">DISPATCH</h4>
+                        <p class="text-sm text-stone-600">Automated replenishment cycle active. Real-time logistical tracking initiated.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-4 md:px-8 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-black uppercase mb-12 text-center font-['Space_Grotesk']">FREQUENTLY ASKED</h2>
+            <div class="space-y-4">
+                <div class="border-2 border-black p-6 bg-white hover:bg-[#F5EDE0] transition-colors">
+                    <h3 class="text-lg font-black uppercase mb-2 font-['Space_Grotesk']">CAN I CHANGE MY SUBSCRIPTION?</h3>
+                    <p class="text-sm text-stone-600">Yes! You can upgrade, downgrade, or modify your subscription at any time from your account dashboard.</p>
+                </div>
+                <div class="border-2 border-black p-6 bg-white hover:bg-[#F5EDE0] transition-colors">
+                    <h3 class="text-lg font-black uppercase mb-2 font-['Space_Grotesk']">WHEN WILL I BE CHARGED?</h3>
+                    <p class="text-sm text-stone-600">You'll be charged on the day you subscribe, then automatically on your renewal date each month.</p>
+                </div>
+                <div class="border-2 border-black p-6 bg-white hover:bg-[#F5EDE0] transition-colors">
+                    <h3 class="text-lg font-black uppercase mb-2 font-['Space_Grotesk']">CAN I SKIP A DELIVERY?</h3>
+                    <p class="text-sm text-stone-600">Absolutely. You can pause or skip deliveries anytime from your account settings.</p>
+                </div>
+                <div class="border-2 border-black p-6 bg-white hover:bg-[#F5EDE0] transition-colors">
+                    <h3 class="text-lg font-black uppercase mb-2 font-['Space_Grotesk']">HOW DO I CANCEL?</h3>
+                    <p class="text-sm text-stone-600">Cancel anytime with one click from your account. No fees, no questions asked.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8 bg-black dark:bg-stone-900 border-t-4 border-black dark:border-stone-800">
+        <div class="flex flex-col gap-2">
+            <div class="text-lg font-black text-white font-['Yatra_One']">कॉफ़ी_कला</div>
+            <p class="text-stone-400 font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest">©2024 कॉफ़ी_कला. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="flex flex-wrap gap-8 justify-center">
+            <a class="text-stone-400 hover:text-white transition-all font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest" href="privacy.html">PRIVACY</a>
+            <a class="text-stone-400 hover:text-white transition-all font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest" href="terms.html">TERMS</a>
+        </div>
+    </footer>
+    <script src="transitions.js"></script>
+</body>
+
+</html>

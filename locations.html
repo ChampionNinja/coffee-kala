@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Locations - कॉफ़ी_कला</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .map-container {
+            background-image: radial-gradient(circle, #E0E3E5 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating-icon {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        .location-marker {
+            position: absolute;
+            z-index: 10;
+        }
+        
+        .location-marker:hover .marker-icon {
+            transform: scale(1.25);
+        }
+        
+        .location-marker:hover .marker-label {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-on-background font-body-md overflow-x-hidden relative">
+    <!-- TopNavBar -->
+    <nav class="sticky top-0 z-50 w-full flex justify-between items-center px-6 py-4 bg-white border-b-4 border-black">
+        <div class="text-3xl md:text-4xl font-black tracking-tight font-['Yatra_One']">कॉफ़ी_कला</div>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="index.html">SHOP</a>
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="subscriptions.html">SUBSCRIPTIONS</a>
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="extraction.html">EXTRACTION</a>
+            <a class="text-black border-b-2 border-black pb-1 font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="locations.html">LOCATIONS</a>
+        </div>
+        <div class="flex gap-4">
+            <a href="profile.html" class="material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors">person</a>
+            <a href="cart.html" class="material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors relative">
+                shopping_cart
+                <span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">2</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-8 py-16 flex flex-col items-center text-center">
+        <div class="w-12 h-1 bg-black mb-6"></div>
+        <h1 class="text-5xl md:text-7xl font-black uppercase mb-6 font-['Space_Grotesk'] leading-tight max-w-3xl">BREW STATIONS<br/>ACROSS THE GRID</h1>
+        <p class="text-lg max-w-2xl font-['Space_Grotesk'] text-stone-600">Precision engineering meets artisanal extraction. Explore our flagship laboratories across India where temperature, pressure, and profile collide.</p>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="relative w-full bg-[#E8DCC8] py-16 map-container overflow-hidden min-h-[800px]">
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative">
+            <!-- Map Container -->
+            <div class="lg:col-span-8 relative flex justify-center items-center">
+                <div class="relative w-full max-w-[600px] aspect-[4/5] flex items-center justify-center">
+                    <!-- India Map Image -->
+                    <img alt="India Map" class="w-full h-full object-contain mix-blend-multiply opacity-20 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB5SMVppW_lBKVeKaDZ4wojtNpTznUekOBgsRa-n8TRImwaJMYWaHW37QJ7BZR689MIxV5bQPYKRBvlZwYrNtGwXQCB92k193VH1d0YP4EZBHiSD6pw9Ur6vG1uApilJYVysMbEJQhcH8q60MhW03RdxSSekdfD_IpW7IWpUajBUpiAbJTg-Bnz_OW3NsyhadHJovO89JcOyczALpKmNkISIU-vsfaDJ1P1_M7zCoQPJrtHZVHGeGrrMSwpDgBJdK_uWT4oV2MtfD4"/>
+                    
+                    <!-- Floating Bean Markers -->
+                    <!-- Delhi (North India, center-left) -->
+                    <button class="location-marker top-[22%] left-[38%]" data-location="delhi">
+                        <div class="marker-icon floating-icon bg-[#2D1A12] p-3 rounded-full shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-transform">
+                            <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings: 'FILL' 1;">coffee</span>
+                        </div>
+                        <span class="marker-label absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] font-bold px-2 py-1 uppercase opacity-0 transition-opacity whitespace-nowrap">DELHI_HQ</span>
+                    </button>
+
+                    <!-- Mumbai (West coast, mid-left) -->
+                    <button class="location-marker top-[48%] left-[18%]" data-location="mumbai">
+                        <div class="marker-icon floating-icon bg-[#2D1A12] p-3 rounded-full shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-transform" style="animation-delay: 0.5s;">
+                            <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings: 'FILL' 1;">coffee</span>
+                        </div>
+                        <span class="marker-label absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] font-bold px-2 py-1 uppercase opacity-0 transition-opacity whitespace-nowrap">MUMBAI_LAB</span>
+                    </button>
+
+                    <!-- Bengaluru (South India, center-left) -->
+                    <button class="location-marker top-[72%] left-[32%]" data-location="bangalore">
+                        <div class="marker-icon floating-icon bg-[#2D1A12] p-3 rounded-full shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-transform" style="animation-delay: 1s;">
+                            <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings: 'FILL' 1;">coffee</span>
+                        </div>
+                        <span class="marker-label absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] font-bold px-2 py-1 uppercase opacity-0 transition-opacity whitespace-nowrap">BLR_CORE</span>
+                    </button>
+
+                    <!-- Hyderabad (Central India, slightly right) -->
+                    <button class="location-marker top-[58%] left-[42%]" data-location="hyderabad">
+                        <div class="marker-icon floating-icon bg-[#2D1A12] p-3 rounded-full shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-transform" style="animation-delay: 1.5s;">
+                            <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings: 'FILL' 1;">coffee</span>
+                        </div>
+                        <span class="marker-label absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] font-bold px-2 py-1 uppercase opacity-0 transition-opacity whitespace-nowrap">HYD_STATION</span>
+                    </button>
+
+                    <!-- Kolkata (East India, far right) -->
+                    <button class="location-marker top-[38%] left-[68%]" data-location="kolkata">
+                        <div class="marker-icon floating-icon bg-[#2D1A12] p-3 rounded-full shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-transform" style="animation-delay: 2s;">
+                            <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings: 'FILL' 1;">coffee</span>
+                        </div>
+                        <span class="marker-label absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] font-bold px-2 py-1 uppercase opacity-0 transition-opacity whitespace-nowrap">KOLKATA_EXT</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Location Info Panel -->
+            <div class="lg:col-span-4 z-20">
+                <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col gap-6" id="location-card">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-stone-600 block mb-1" id="card-label">ACTIVE NODE</span>
+                            <h2 class="text-4xl font-black uppercase font-['Space_Grotesk']" id="location-name">BENGALURU</h2>
+                        </div>
+                        <div class="bg-black text-white p-2">
+                            <span class="material-symbols-outlined">sensors</span>
+                        </div>
+                    </div>
+
+                    <div class="border-t-2 border-black/10 pt-6">
+                        <h3 class="text-xs font-black uppercase mb-2 tracking-wide" id="station-name">STATION: PRECISION ESPRESSO LAB</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed" id="station-description">Our flagship R&D facility located in the heart of Indiranagar. Featuring modular extraction systems and a curated library of seasonal single-origins.</p>
+                    </div>
+
+                    <div class="bg-[#F5EDE0] p-4 border-l-4 border-black">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-[10px] font-black uppercase tracking-wide">SIGNATURE ROAST</span>
+                            <span class="text-[10px] font-bold uppercase text-stone-600" id="blend-type">98% DARK</span>
+                        </div>
+                        <p class="text-lg font-black uppercase" id="signature-blend">THE ARCHITECT V2</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 py-4 border-y-2 border-black/10">
+                        <div>
+                            <span class="text-[10px] font-black uppercase text-stone-600 block mb-1">SYSTEM STATUS</span>
+                            <p class="text-xs font-black uppercase text-green-600" id="status">ONLINE</p>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-black uppercase text-stone-600 block mb-1">HOURS</span>
+                            <p class="text-xs font-black uppercase" id="hours">08:00 - 22:00</p>
+                        </div>
+                    </div>
+
+                    <button class="bg-black text-white py-4 px-6 text-xs font-black uppercase tracking-widest hover:bg-stone-800 transition-colors flex justify-between items-center group">
+                        VISIT STATION
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="max-w-7xl mx-auto px-8 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 border-2 border-black/10 hover:border-black transition-colors group">
+                <span class="material-symbols-outlined text-5xl mb-4 block group-hover:scale-110 transition-transform">speed</span>
+                <h4 class="text-2xl font-black uppercase mb-2 font-['Space_Grotesk']">EXPRESS EXTRACTION</h4>
+                <p class="text-sm text-stone-600">Rapid service nodes designed for the mobile professional. No compromises on pressure or temp.</p>
+            </div>
+            <div class="p-8 border-2 border-black/10 hover:border-black transition-colors group">
+                <span class="material-symbols-outlined text-5xl mb-4 block group-hover:scale-110 transition-transform">biotech</span>
+                <h4 class="text-2xl font-black uppercase mb-2 font-['Space_Grotesk']">FLAVOR LABS</h4>
+                <p class="text-sm text-stone-600">Experimental roasts and brewing techniques. Only available at select Station nodes across the grid.</p>
+            </div>
+            <div class="p-8 border-2 border-black/10 hover:border-black transition-colors group">
+                <span class="material-symbols-outlined text-5xl mb-4 block group-hover:scale-110 transition-transform">hub</span>
+                <h4 class="text-2xl font-black uppercase mb-2 font-['Space_Grotesk']">GLOBAL SYNC</h4>
+                <p class="text-sm text-stone-600">One profile across all devices. Order via app and pick up at any station within the network.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8 bg-black dark:bg-stone-900 border-t-4 border-black dark:border-stone-800">
+        <div class="flex flex-col gap-2">
+            <div class="text-lg font-black text-white font-['Yatra_One']">कॉफ़ी_कला</div>
+            <p class="text-stone-400 font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest">©2024 कॉफ़ी_कला. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="flex flex-wrap gap-8 justify-center">
+            <a class="text-stone-400 hover:text-white transition-all font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest" href="privacy.html">PRIVACY</a>
+            <a class="text-stone-400 hover:text-white transition-all font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest" href="terms.html">TERMS</a>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        const locations = {
+            delhi: {
+                label: 'ACTIVE NODE',
+                name: 'DELHI',
+                station: 'STATION: CAPITAL BREW TERMINAL',
+                description: 'Hauz Khas heritage building converted into modern coffee laboratory. Features vintage espresso machines and experimental brewing stations.',
+                blend: 'VOLTAGE V2',
+                blendType: '92% DARK',
+                hours: '07:30 - 23:00',
+                status: 'ONLINE'
+            },
+            mumbai: {
+                label: 'ACTIVE NODE',
+                name: 'MUMBAI',
+                station: 'STATION: COASTAL EXTRACTION HUB',
+                description: 'Bandra flagship with ocean-view brewing deck. Specializing in cold extraction methods and nitro systems for maximum flavor clarity.',
+                blend: 'BLACKOUT NITRO',
+                blendType: '98% DARK',
+                hours: '08:00 - 22:00',
+                status: 'ONLINE'
+            },
+            bangalore: {
+                label: 'ACTIVE NODE',
+                name: 'BENGALURU',
+                station: 'STATION: PRECISION ESPRESSO LAB',
+                description: 'Our flagship R&D facility located in the heart of Indiranagar. Featuring modular extraction systems and a curated library of seasonal single-origins.',
+                blend: 'THE ARCHITECT V2',
+                blendType: '98% DARK',
+                hours: '08:00 - 22:00',
+                status: 'ONLINE'
+            },
+            hyderabad: {
+                label: 'ACTIVE NODE',
+                name: 'HYDERABAD',
+                station: 'STATION: TECH CITY BREW NODE',
+                description: 'Hitech City location with automated brewing systems. Perfect for tech professionals seeking precision and consistency in every cup.',
+                blend: 'SILICON ROAST',
+                blendType: '90% DARK',
+                hours: '07:00 - 23:00',
+                status: 'ONLINE'
+            },
+            kolkata: {
+                label: 'ACTIVE NODE',
+                name: 'KOLKATA',
+                station: 'STATION: HERITAGE ROASTERY',
+                description: 'Park Street colonial building housing traditional roasting equipment alongside modern brewing stations. A perfect blend of history and innovation.',
+                blend: 'BENGAL BLEND',
+                blendType: '85% MEDIUM',
+                hours: '08:00 - 21:30',
+                status: 'ONLINE'
+            }
+        };
+
+        const markers = document.querySelectorAll('.location-marker');
+
+        markers.forEach(marker => {
+            marker.addEventListener('click', function() {
+                const locationKey = this.getAttribute('data-location');
+                updateLocationCard(locationKey);
+            });
+        });
+
+        function updateLocationCard(locationKey) {
+            const location = locations[locationKey];
+            
+            document.getElementById('card-label').textContent = location.label;
+            document.getElementById('location-name').textContent = location.name;
+            document.getElementById('station-name').textContent = location.station;
+            document.getElementById('station-description').textContent = location.description;
+            document.getElementById('signature-blend').textContent = location.blend;
+            document.getElementById('blend-type').textContent = location.blendType;
+            document.getElementById('hours').textContent = location.hours;
+            document.getElementById('status').textContent = location.status;
+        }
+    </script>
+    <script src="transitions.js"></script>
+</body>
+
+</html>

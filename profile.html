@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Profile - कॉफ़ी_कला</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#ffca98",
+                        "on-surface": "#1f1b14",
+                        "inverse-primary": "#dec1b3",
+                        "on-secondary-container": "#7a532a",
+                        "on-primary-container": "#aa9084",
+                        "tertiary-container": "#47260e",
+                        "surface-tint": "#705a4f",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#d3c3bd",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1f1b14",
+                        "tertiary-fixed-dim": "#f2bb98",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#f0bd8b",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#281810",
+                        "on-surface-variant": "#4f4540",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#bd8b6b",
+                        "on-secondary-fixed": "#2c1600",
+                        "tertiary-fixed": "#ffdcc7",
+                        "inverse-on-surface": "#f9efe4",
+                        "on-tertiary-fixed-variant": "#643e24",
+                        "on-primary-fixed-variant": "#574238",
+                        "on-tertiary-fixed": "#301401",
+                        "surface-dim": "#e2d9ce",
+                        "primary-fixed": "#fbdcce",
+                        "surface-container-low": "#fcf2e7",
+                        "on-secondary-fixed-variant": "#623f18",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#2e1200",
+                        "background": "#fff8f3",
+                        "primary-fixed-dim": "#dec1b3",
+                        "surface-container-high": "#f1e7dc",
+                        "surface-variant": "#ebe1d6",
+                        "surface-container-highest": "#ebe1d6",
+                        "primary-container": "#3c2a21",
+                        "inverse-surface": "#353028",
+                        "secondary": "#7d562d",
+                        "surface": "#fff8f3",
+                        "primary": "#25160e",
+                        "outline": "#81756f",
+                        "surface-bright": "#fff8f3",
+                        "surface-container": "#f6ece1",
+                        "secondary-fixed": "#ffdcbd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xl": "64px",
+                        "margin": "32px",
+                        "gutter": "20px",
+                        "base": "4px",
+                        "lg": "40px",
+                        "md": "24px",
+                        "sm": "16px",
+                        "xs": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "label-bold": ["Space Grotesk"],
+                        "display-2xl": ["Space Grotesk"],
+                        "body-lg": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "display-2xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-[#F5EDE0] text-on-background font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav class="sticky top-0 z-50 w-full flex justify-between items-center px-6 py-4 bg-white border-b-4 border-black">
+        <div class="text-3xl md:text-4xl font-black tracking-tight font-['Yatra_One']">कॉफ़ी_कला</div>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="index.html">SHOP</a>
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="subscriptions.html">SUBSCRIPTIONS</a>
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="extraction.html">EXTRACTION</a>
+            <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md" href="locations.html">LOCATIONS</a>
+        </div>
+        <div class="flex gap-4">
+            <a href="profile.html" class="material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors border-b-2 border-black">person</a>
+            <a href="cart.html" class="material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors relative">
+                shopping_cart
+                <span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold cart-badge">2</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
+        <!-- Account Header Section -->
+        <section class="mb-12 border-b-4 border-black pb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                <div>
+                    <div class="font-['JetBrains_Mono'] text-[10px] text-on-surface-variant mb-2 uppercase tracking-widest">MEMBER SINCE 2024 / ID: 8821-KT</div>
+                    <h1 class="font-['Space_Grotesk'] text-[48px] md:text-[64px] text-primary uppercase leading-none font-black tracking-tight">JACK KICKSTART</h1>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                    <div class="border-2 border-black px-4 py-2 bg-white">
+                        <span class="font-label-bold text-[12px] font-bold uppercase tracking-wide">MAKER STATUS: ACTIVE</span>
+                    </div>
+                    <div class="border-2 border-black px-4 py-2 bg-primary text-on-primary">
+                        <span class="font-label-bold text-[12px] font-bold uppercase tracking-wide">NODE VERIFIED</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- MAIN PANEL: Dashboard -->
+            <div class="lg:col-span-8 space-y-8">
+                <!-- Current Subscription & Upcoming Delivery -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Current Subscription -->
+                    <div class="border-4 border-black p-6 bg-white brutalist-border-heavy hard-shadow-md hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all">
+                        <div class="font-['JetBrains_Mono'] text-[10px] text-on-surface-variant uppercase mb-3 tracking-widest">Current Subscription</div>
+                        <h3 class="font-['Space_Grotesk'] text-[28px] font-black mb-2 uppercase">BLACKOUT NITRO</h3>
+                        <p class="font-label-bold text-[12px] text-secondary uppercase font-bold tracking-tight">CALIBRATED FOR WEEKLY DISPATCH</p>
+                    </div>
+
+                    <!-- Upcoming Delivery -->
+                    <div class="border-2 border-black p-6 bg-white hover:border-4 transition-all">
+                        <div class="font-['JetBrains_Mono'] text-[10px] text-on-surface-variant uppercase mb-3 tracking-widest">Upcoming Delivery</div>
+                        <div class="font-['JetBrains_Mono'] text-[32px] font-bold">14.OCT.24</div>
+                        <p class="font-['Inter'] text-[14px] mt-2">Batch #402: High Altitude Roast</p>
+                    </div>
+                </div>
+
+                <!-- Extraction Profile Interactive Panel -->
+                <div class="border-4 border-black p-8 bg-white brutalist-border-heavy hard-shadow-md">
+                    <div class="flex justify-between items-center mb-8">
+                        <h3 class="font-['Space_Grotesk'] text-[24px] font-black uppercase">EXTRACTION PROFILE: KT-01</h3>
+                        <span class="font-['JetBrains_Mono'] text-[10px] bg-primary text-on-primary px-3 py-2 uppercase tracking-widest border-2 border-black">PRECISION MODE</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <!-- Temperature -->
+                        <div class="space-y-4">
+                            <div class="font-['JetBrains_Mono'] text-[10px] text-on-surface-variant uppercase tracking-widest">Temperature</div>
+                            <div class="h-24 flex items-end justify-center gap-1">
+                                <div class="w-2 bg-stone-200 h-10"></div>
+                                <div class="w-2 bg-stone-200 h-14"></div>
+                                <div class="w-2 bg-primary h-20"></div>
+                                <div class="w-2 bg-primary h-24"></div>
+                                <div class="w-2 bg-stone-200 h-16"></div>
+                            </div>
+                            <div class="font-['JetBrains_Mono'] text-[28px] font-bold">94.5°C</div>
+                        </div>
+
+                        <!-- Pressure -->
+                        <div class="space-y-4">
+                            <div class="font-['JetBrains_Mono'] text-[10px] text-on-surface-variant uppercase tracking-widest">Pressure</div>
+                            <div class="h-24 flex items-center justify-center">
+                                <div class="w-20 h-20 rounded-full border-4 border-stone-200 flex items-center justify-center border-t-primary rotate-45">
+                                    <span class="font-['JetBrains_Mono'] text-[28px] font-bold -rotate-45">9.2</span>
+                                </div>
+                            </div>
+                            <div class="font-['JetBrains_Mono'] text-[12px] uppercase tracking-wide">BAR UNITS</div>
+                        </div>
+
+                        <!-- Flow Rate -->
+                        <div class="space-y-4">
+                            <div class="font-['JetBrains_Mono'] text-[10px] text-on-surface-variant uppercase tracking-widest">Flow Rate</div>
+                            <div class="h-24 flex items-center justify-center">
+                                <div class="w-full bg-stone-200 h-2 relative">
+                                    <div class="absolute top-0 left-0 w-3/4 bg-primary h-2"></div>
+                                </div>
+                            </div>
+                            <div class="font-['JetBrains_Mono'] text-[28px] font-bold">2.4 ml/s</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roast History Table -->
+                <div class="overflow-hidden border-4 border-black brutalist-border-heavy">
+                    <table class="w-full border-collapse">
+                        <thead class="bg-primary text-on-primary">
+                            <tr>
+                                <th class="p-4 text-left font-['JetBrains_Mono'] text-[12px] uppercase tracking-wide">Batch Roast</th>
+                                <th class="p-4 text-left font-['JetBrains_Mono'] text-[12px] uppercase tracking-wide">Grind Type</th>
+                                <th class="p-4 text-left font-['JetBrains_Mono'] text-[12px] uppercase tracking-wide">Date</th>
+                                <th class="p-4 text-right font-['JetBrains_Mono'] text-[12px] uppercase tracking-wide">Intensity</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y-2 divide-black bg-white">
+                            <tr class="hover:bg-stone-100 transition-colors">
+                                <td class="p-4 font-['JetBrains_Mono'] text-[14px] uppercase">DARK MATTER #12</td>
+                                <td class="p-4 font-['JetBrains_Mono'] text-[12px] uppercase">ESPRESSO / FINE</td>
+                                <td class="p-4 font-['JetBrains_Mono'] text-[14px]">02.10.24</td>
+                                <td class="p-4 text-right font-['JetBrains_Mono'] text-[16px] font-bold">92%</td>
+                            </tr>
+                            <tr class="hover:bg-stone-100 transition-colors">
+                                <td class="p-4 font-['JetBrains_Mono'] text-[14px] uppercase">MONSOON MALABAR</td>
+                                <td class="p-4 font-['JetBrains_Mono'] text-[12px] uppercase">POUR OVER / MED</td>
+                                <td class="p-4 font-['JetBrains_Mono'] text-[14px]">25.09.24</td>
+                                <td class="p-4 text-right font-['JetBrains_Mono'] text-[16px] font-bold">78%</td>
+                            </tr>
+                            <tr class="hover:bg-stone-100 transition-colors">
+                                <td class="p-4 font-['JetBrains_Mono'] text-[14px] uppercase">COLD BREW PEAK</td>
+                                <td class="p-4 font-['JetBrains_Mono'] text-[12px] uppercase">COARSE</td>
+                                <td class="p-4 font-['JetBrains_Mono'] text-[14px]">18.09.24</td>
+                                <td class="p-4 text-right font-['JetBrains_Mono'] text-[16px] font-bold">85%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- RIGHT PANEL: Telemetry -->
+            <aside class="lg:col-span-4 space-y-8">
+                <!-- Caffeine Output -->
+                <div class="bg-[#E8DCC8] p-6 space-y-6 border-4 border-black brutalist-border-heavy">
+                    <h3 class="font-['Space_Grotesk'] text-[20px] font-black uppercase border-b-2 border-black pb-3">CAFFEINE OUTPUT</h3>
+                    
+                    <!-- Waveform bars -->
+                    <div class="space-y-4">
+                        <div class="font-['JetBrains_Mono'] text-[10px] text-on-surface-variant uppercase tracking-widest">Weekly Consumption Waves</div>
+                        <div class="flex items-end gap-1 h-28">
+                            <div class="flex-1 bg-primary h-[20%]"></div>
+                            <div class="flex-1 bg-primary h-[45%]"></div>
+                            <div class="flex-1 bg-primary h-[80%]"></div>
+                            <div class="flex-1 bg-primary h-[30%]"></div>
+                            <div class="flex-1 bg-primary h-[95%]"></div>
+                            <div class="flex-1 bg-primary h-[60%]"></div>
+                            <div class="flex-1 bg-primary h-[40%]"></div>
+                        </div>
+                        <div class="flex justify-between font-['JetBrains_Mono'] text-[10px] uppercase text-on-surface-variant">
+                            <span>MON</span>
+                            <span>SUN</span>
+                        </div>
+                    </div>
+
+                    <!-- Gauges -->
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-center">
+                            <div class="space-y-1">
+                                <div class="font-['JetBrains_Mono'] text-[10px] text-on-surface-variant uppercase tracking-widest">Roast Profile</div>
+                                <div class="font-['Space_Grotesk'] text-[20px] font-black uppercase">HEAVY MED</div>
+                            </div>
+                            <div class="w-14 h-14 rounded-full border-4 border-primary border-r-transparent animate-spin" style="animation-duration: 3s;"></div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="font-['JetBrains_Mono'] text-[10px] text-on-surface-variant uppercase tracking-widest">Monthly Volume</div>
+                            <div class="font-['JetBrains_Mono'] text-[36px] font-black">1.8 <span class="text-[14px] font-normal">KG</span></div>
+                            <div class="w-full bg-stone-300 h-2">
+                                <div class="bg-primary h-full w-[70%]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Override Protocol -->
+                <div class="bg-primary text-on-primary p-6 space-y-4 relative overflow-hidden border-4 border-black brutalist-border-heavy hard-shadow-md">
+                    <div class="relative z-10">
+                        <h4 class="font-['Space_Grotesk'] text-[20px] font-black uppercase leading-tight mb-4">SYSTEM OVERRIDE PROTOCOL</h4>
+                        <p class="font-['Inter'] text-[14px] opacity-90 mb-6">Modify delivery schedule and extraction parameters for the next deployment cycle.</p>
+                        <button class="w-full border-2 border-on-primary py-3 font-['Space_Grotesk'] text-[14px] font-bold uppercase hover:bg-on-primary hover:text-primary transition-all">MODIFY PROTOCOL</button>
+                    </div>
+                    <!-- Decorative background geometry -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 -rotate-45 translate-x-16 -translate-y-16"></div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8 bg-black dark:bg-stone-900 border-t-4 border-black dark:border-stone-800 mt-16">
+        <div class="flex flex-col gap-2">
+            <div class="text-lg font-black text-white font-['Yatra_One']">कॉफ़ी_कला</div>
+            <p class="text-stone-400 font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest">©2024 कॉफ़ी_कला. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="flex flex-wrap gap-8 justify-center">
+            <a class="text-stone-400 hover:text-white transition-all font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest" href="privacy.html">PRIVACY</a>
+            <a class="text-stone-400 hover:text-white transition-all font-['Space_Grotesk'] font-bold uppercase text-xs tracking-widest" href="terms.html">TERMS</a>
+        </div>
+    </footer>
+
+    <script src="bundle.js"></script>
+    <script src="transitions.js"></script>
+</body>
+
+</html>
