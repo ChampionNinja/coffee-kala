@@ -2,9 +2,9 @@
 
 A brutalist-editorial coffee e-commerce experience featuring cinematic 3D coffee beans, interactive typography, and a premium shopping experience.
 
-![Coffee Kala](./img/cute_auto_nobg.png)
 
-## 🎨 Design Philosophy
+
+##  Design Philosophy
 
 **Brutalist-Editorial Aesthetic**
 - Bold typography with dramatic scale
@@ -20,23 +20,23 @@ A brutalist-editorial coffee e-commerce experience featuring cinematic 3D coffee
 - Background: `#E8DCC8` (Cream)
 - Highlights: `#FFCA98` (Warm Orange)
 
-## ✨ Features
+##  Features
 
-### 🖥️ Desktop Experience
+###  Desktop Experience
 - **3D Floating Coffee Beans**: Real-time rendered 3D coffee bean models using Three.js
 - **Interactive Text**: Letters change color when beans pass behind them
 - **Mouse Interaction**: Beans react to cursor movement with physics-based disturbance field
 - **Parallax Effects**: Multi-layer depth with smooth parallax scrolling
 - **Cinematic Lighting**: Professional lighting setup with key, fill, rim, and accent lights
 
-### 📱 Mobile Experience
+###  Mobile Experience
 - **Typography-First Design**: Oversized editorial typography optimized for mobile
 - **Performance Optimized**: No heavy 3D rendering on mobile devices
 - **Subtle Animations**: Gentle fade-ins and floating effects
 - **Clean Layout**: Spacious composition with improved readability
 - **Static Bean Images**: Lightweight decorative elements instead of 3D
 
-### 🛒 E-Commerce Features
+###  E-Commerce Features
 - **Product Catalog**: Featured coffee blends with hover effects
 - **Shopping Cart**: Interactive cart with quantity controls and grind selection
 - **Checkout Flow**: Complete payment and delivery form
@@ -44,7 +44,7 @@ A brutalist-editorial coffee e-commerce experience featuring cinematic 3D coffee
 - **Maker Bundle**: Special bundle offer with 20% discount
 - **Profile Dashboard**: User account with subscription management and extraction profiles
 
-### 🎭 Interactive Elements
+###  Interactive Elements
 - **Dynamic Cart Badge**: Real-time item count updates
 - **Grind Selection**: Choose between COARSE, FINE, and ESPRESSO
 - **Quantity Controls**: Increment/decrement with live total updates
@@ -52,7 +52,7 @@ A brutalist-editorial coffee e-commerce experience featuring cinematic 3D coffee
 - **Page Transitions**: Elegant fade transitions between pages
 - **Progress Tracking**: Visual roast cycle progress bar
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 कॉफ़ी_कला/
@@ -89,7 +89,7 @@ A brutalist-editorial coffee e-commerce experience featuring cinematic 3D coffee
 └── README.md
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - Modern web browser (Chrome, Firefox, Safari, Edge)
@@ -128,7 +128,7 @@ A brutalist-editorial coffee e-commerce experience featuring cinematic 3D coffee
 ### Why a local server?
 The 3D coffee bean models (OBJ/MTL files) require a web server due to CORS restrictions. Opening `index.html` directly in a browser won't load the 3D models.
 
-## 🎯 Key Pages
+##  Key Pages
 
 ### Landing Page (`index.html`)
 - Hero section with 3D floating beans (desktop) or editorial typography (mobile)
@@ -161,7 +161,7 @@ The 3D coffee bean models (OBJ/MTL files) require a web server due to CORS restr
 - Staggered fade-in animations
 - Continue shopping and track order CTAs
 
-## 🎨 Design System
+##  Design System
 
 ### Typography
 - **Display**: Space Grotesk (700-900 weight)
@@ -190,7 +190,7 @@ The 3D coffee bean models (OBJ/MTL files) require a web server due to CORS restr
 - **Fade In**: 600-800ms ease-out
 - **Floating**: 6s ease-in-out infinite
 
-## 🔧 Technical Details
+##  Technical Details
 
 ### 3D Rendering (Desktop Only)
 - **Library**: Three.js r128
@@ -217,13 +217,13 @@ The 3D coffee bean models (OBJ/MTL files) require a web server due to CORS restr
 - **Smart Detection**: Only applies to internal links
 - **Browser Support**: Back/forward button compatible
 
-## 📱 Responsive Breakpoints
+##  Responsive Breakpoints
 
 - **Mobile**: < 768px (Editorial typography hero)
 - **Tablet**: 768px - 1024px
 - **Desktop**: > 1024px (Full 3D bean experience)
 
-## 🎭 Interactive Features
+##  Interactive Features
 
 ### Text Interaction (Desktop)
 Letters in "HIGH VOLTAGE BREW" change color when 3D beans pass behind them:
@@ -244,14 +244,14 @@ Letters in "HIGH VOLTAGE BREW" change color when 3D beans pass behind them:
 - Remove with fade-out animation
 - Auto-save to LocalStorage
 
-## 🌐 Browser Support
+##  Browser Support
 
-- Chrome/Edge: ✅ Full support
-- Firefox: ✅ Full support
-- Safari: ✅ Full support
-- Mobile browsers: ✅ Optimized experience
+- Chrome/Edge:  Full support
+- Firefox:  Full support
+- Safari:  Full support
+- Mobile browsers:  Optimized experience
 
-## 📦 Dependencies
+##  Dependencies
 
 ### External Libraries
 - **Three.js** (r128): 3D rendering
@@ -262,7 +262,7 @@ Letters in "HIGH VOLTAGE BREW" change color when 3D beans pass behind them:
 ### No Build Process Required
 All dependencies loaded via CDN - no npm, webpack, or build tools needed!
 
-## 🎨 Customization
+##  Customization
 
 ### Colors
 Edit the Tailwind config in each HTML file's `<script id="tailwind-config">` section.
@@ -278,7 +278,7 @@ Modify font families in the Tailwind config and update CSS font-family declarati
 ### Cart Items
 Update default items in `cart.html` or modify `loadCartFromStorage()` in `cart.js`.
 
-## 🚀 Performance Tips
+##  Performance Tips
 
 ### Desktop
 - Bean count optimized at 25 (balance between visual richness and performance)
@@ -303,25 +303,3 @@ Update default items in `cart.html` or modify `loadCartFromStorage()` in `cart.j
 - [ ] Subscription management
 - [ ] Admin dashboard
 - [ ] Inventory management
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 👨‍💻 Author
-
-Created with ☕ and code
-
-## 🙏 Acknowledgments
-
-- Coffee bean 3D model from [source]
-- Coffee images from Unsplash
-- Inspiration from brutalist web design and specialty coffee culture
-
----
-
-**कॉफ़ी_कला** - Where precision meets passion in every brew. ☕✨
