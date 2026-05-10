@@ -15,6 +15,21 @@ function initScene() {
         console.error('Canvas container not found!');
         return;
     }
+    
+    // Check if mobile device
+    const isMobile = window.innerWidth < 769;
+    
+    if (isMobile) {
+        console.log('Mobile device detected - skipping 3D bean rendering for performance');
+        // Hide desktop 3D elements
+        const desktop3D = document.querySelector('.desktop-hero-3d');
+        if (desktop3D) {
+            desktop3D.style.display = 'none';
+        }
+        return; // Exit early on mobile
+    }
+    
+    console.log('Desktop device detected - initializing 3D bean experience');
 
     // Scene setup
     const scene = new THREE.Scene();

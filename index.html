@@ -130,32 +130,49 @@
 
     <!-- Hero Section -->
     <header class="relative w-full h-screen flex flex-col items-center justify-center text-center px-margin py-8 bg-[#E8DCC8] overflow-hidden" id="hero-header">
-        <!-- Parallax Background Layer -->
-        <div class="bean-parallax-layer" id="layer-bg">
-            <!-- Background layer for parallax effect -->
+        <!-- Desktop: 3D Bean Experience -->
+        <div class="desktop-hero-3d hidden md:block">
+            <!-- Parallax Background Layer -->
+            <div class="bean-parallax-layer" id="layer-bg">
+                <!-- Background layer for parallax effect -->
+            </div>
+
+            <!-- 3D Mid-ground Container -->
+            <div id="canvas-container"></div>
+
+            <!-- Foreground Bokeh Layer -->
+            <div class="bean-parallax-layer z-40" id="layer-fg">
+                <!-- Foreground layer for parallax effect -->
+            </div>
         </div>
 
-        <!-- 3D Mid-ground Container -->
-        <div id="canvas-container"></div>
-
-        <!-- Foreground Bokeh Layer -->
-        <div class="bean-parallax-layer z-40" id="layer-fg">
-            <!-- Foreground layer for parallax effect -->
+        <!-- Mobile: Editorial Typography Hero -->
+        <div class="mobile-hero-editorial md:hidden absolute inset-0 flex items-center justify-center overflow-hidden">
+            <!-- Subtle background bean image -->
+            <div class="absolute -right-20 top-10 w-64 h-64 opacity-20 pointer-events-none">
+                <img src="./img/fatih-mehmet-yildiz-4KqHNQ3sJ6g-unsplash.jpg" alt="" class="w-full h-full object-cover rounded-full blur-sm" />
+            </div>
+            <div class="absolute -left-16 bottom-20 w-48 h-48 opacity-15 pointer-events-none">
+                <img src="./img/ante-samarzija-lsmu0rUhUOk-unsplash.jpg" alt="" class="w-full h-full object-cover rounded-full blur-sm" />
+            </div>
+            
+            <!-- Grain texture overlay -->
+            <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=&apos;0 0 400 400&apos; xmlns=&apos;http://www.w3.org/2000/svg&apos;%3E%3Cfilter id=&apos;noiseFilter&apos;%3E%3CfeTurbulence type=&apos;fractalNoise&apos; baseFrequency=&apos;0.9&apos; numOctaves=&apos;4&apos; stitchTiles=&apos;stitch&apos;/%3E%3C/filter%3E%3Crect width=&apos;100%25&apos; height=&apos;100%25&apos; filter=&apos;url(%23noiseFilter&apos;)/%3E%3C/svg%3E');"></div>
         </div>
 
         <!-- Hero Content - Centered Composition -->
-        <div class="z-30 flex flex-col items-center relative max-w-5xl mx-auto -mt-16">
+        <div class="z-30 flex flex-col items-center relative max-w-5xl mx-auto mobile-hero-content">
             <!-- Badge -->
-            <span class="relative z-10 inline-block bg-primary text-on-primary px-sm py-xs font-label-bold text-label-bold mb-sm brutalist-border uppercase tracking-widest text-[10px]">EST. 2024 PRECISION BREW</span>
+            <span class="relative z-10 inline-block bg-primary text-on-primary px-sm py-xs font-label-bold text-label-bold mb-sm brutalist-border uppercase tracking-widest text-[10px] fade-in-element">EST. 2024 PRECISION BREW</span>
             
             <!-- Main Headline -->
-            <h1 id="hero-title" class="relative z-10 font-display-2xl text-[72px] md:text-[140px] leading-[0.85] mb-8 text-primary uppercase font-black italic tracking-[-0.04em]" style="mix-blend-mode: normal;">
-                <span class="hero-line" data-text="HIGH VOLTAGE" style="word-spacing: 0.5em;">HIGH VOLTAGE</span><br/>
-                <span class="hero-line" data-text="BREW">BREW</span>
+            <h1 id="hero-title" class="relative z-10 font-display-2xl text-[56px] sm:text-[72px] md:text-[140px] leading-[0.85] mb-8 text-primary uppercase font-black italic tracking-[-0.04em] fade-in-element" style="mix-blend-mode: normal; animation-delay: 0.2s;">
+                <span class="hero-line block mb-2" data-text="HIGH VOLTAGE" style="word-spacing: 0.5em;">HIGH VOLTAGE</span>
+                <span class="hero-line block" data-text="BREW">BREW</span>
             </h1>
             
             <!-- CTA -->
-            <a href="cart.html" class="relative z-10 bg-primary text-on-primary font-headline-md text-headline-md px-lg py-sm brutalist-border-heavy hard-shadow-md active-press uppercase tracking-tighter transition-all pointer-events-auto inline-block">
+            <a href="cart.html" class="relative z-10 bg-primary text-on-primary font-headline-md text-headline-md px-lg py-sm brutalist-border-heavy hard-shadow-md active-press uppercase tracking-tighter transition-all pointer-events-auto inline-block fade-in-element" style="animation-delay: 0.4s;">
                 ORDER NOW
             </a>
         </div>
