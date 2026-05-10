@@ -125,8 +125,21 @@
                 shopping_cart
                 <span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">2</span>
             </a>
+        
+            <button class="md:hidden material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">menu</button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-[60] bg-white pt-24 px-6 pb-6 flex flex-col gap-6 font-['Space_Grotesk'] uppercase font-black text-2xl">
+        <a href="index.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">SHOP</a>
+        <a href="subscriptions.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">SUBSCRIPTIONS</a>
+        <a href="extraction.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">EXTRACTION</a>
+        <a href="locations.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">LOCATIONS</a>
+        <a href="profile.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">PROFILE</a>
+        <button class="absolute top-6 right-6 material-symbols-outlined text-3xl p-2 hover:bg-stone-200 transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">close</button>
+    </div>
+
 
     <!-- Hero Section -->
     <header class="relative w-full h-screen flex flex-col items-center justify-center text-center px-margin py-8 bg-[#E8DCC8] overflow-hidden" id="hero-header">
@@ -166,9 +179,9 @@
             <span class="relative z-10 inline-block bg-primary text-on-primary px-sm py-xs font-label-bold text-label-bold mb-sm brutalist-border uppercase tracking-widest text-[10px] fade-in-element">EST. 2024 PRECISION BREW</span>
             
             <!-- Main Headline -->
-            <h1 id="hero-title" class="relative z-10 font-display-2xl text-[40px] sm:text-[72px] md:text-[140px] break-words leading-[0.85] mb-8 text-primary uppercase font-black italic tracking-[-0.04em] fade-in-element" style="mix-blend-mode: normal; animation-delay: 0.2s;">
-                <span class="hero-line block mb-2 break-words" data-text="HIGH VOLTAGE" style="word-spacing: 0.5em;">HIGH VOLTAGE</span>
-                <span class="hero-line block break-words" data-text="BREW">BREW</span>
+            <h1 id="hero-title" class="relative z-10 font-display-2xl text-[12vw] sm:text-[72px] md:text-[140px] break-words leading-[0.85] mb-8 text-primary uppercase font-black italic tracking-[-0.04em] fade-in-element w-full px-4 text-center" style="mix-blend-mode: normal; animation-delay: 0.2s;">
+                <span class="hero-line block mb-2 break-words whitespace-normal" data-text="HIGH VOLTAGE" style="word-spacing: normal;">HIGH<br class="sm:hidden"/>VOLTAGE</span>
+                <span class="hero-line block break-words whitespace-normal" data-text="BREW">BREW</span>
             </h1>
             
             <!-- CTA -->

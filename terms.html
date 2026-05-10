@@ -33,8 +33,21 @@
                 shopping_cart
                 <span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">2</span>
             </a>
+        
+            <button class="md:hidden material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">menu</button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-[60] bg-white pt-24 px-6 pb-6 flex flex-col gap-6 font-['Space_Grotesk'] uppercase font-black text-2xl">
+        <a href="index.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">SHOP</a>
+        <a href="subscriptions.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">SUBSCRIPTIONS</a>
+        <a href="extraction.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">EXTRACTION</a>
+        <a href="locations.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">LOCATIONS</a>
+        <a href="profile.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">PROFILE</a>
+        <button class="absolute top-6 right-6 material-symbols-outlined text-3xl p-2 hover:bg-stone-200 transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">close</button>
+    </div>
+
 
     <!-- Terms of Service Content -->
     <main class="max-w-4xl mx-auto px-8 py-16">
