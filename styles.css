@@ -137,6 +137,72 @@ a, button {
     overflow: hidden;
 }
 
+/* Mobile Hero - Editorial Typography */
+.mobile-hero-editorial {
+    background: linear-gradient(135deg, #E8DCC8 0%, #D4C4B0 100%);
+}
+
+/* Fade-in animation for mobile hero elements */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-element {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+/* Mobile hero content adjustments */
+@media (max-width: 768px) {
+    .mobile-hero-content {
+        margin-top: 0;
+        padding: 0 1.5rem;
+    }
+    
+    #hero-title {
+        font-size: clamp(48px, 12vw, 72px);
+        line-height: 0.9;
+        letter-spacing: -0.03em;
+    }
+    
+    .hero-line {
+        display: block;
+        margin-bottom: 0.1em;
+    }
+    
+    /* Subtle floating animation for mobile */
+    .mobile-hero-content {
+        animation: gentleFloat 6s ease-in-out infinite;
+    }
+    
+    @keyframes gentleFloat {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+/* Desktop: Show 3D beans */
+@media (min-width: 769px) {
+    .desktop-hero-3d {
+        display: block !important;
+    }
+    
+    .mobile-hero-editorial {
+        display: none !important;
+    }
+}
+
 /* Ribbon clip path for -20% badge */
 .clip-ribbon {
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);

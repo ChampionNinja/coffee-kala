@@ -37,7 +37,7 @@
 <body class="bg-white text-on-background font-body-md overflow-x-hidden relative">
     <!-- TopNavBar -->
     <nav class="sticky top-0 z-50 w-full flex justify-between items-center px-6 py-4 bg-white border-b-4 border-black">
-        <div class="text-3xl md:text-4xl font-black tracking-tight font-['Yatra_One']">कॉफ़ी_कला</div>
+        <a href="index.html" class="text-3xl md:text-4xl font-black tracking-tight font-['Yatra_One']">कॉफ़ी_कला</a>
         <div class="hidden md:flex gap-8 items-center">
             <a class="text-stone-600 font-medium hover:text-black transition-colors font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-body-md"
                 href="index.html">SHOP</a>
@@ -55,8 +55,21 @@
                 class="material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors relative">shopping_cart
                 <span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">2</span>
             </a>
+        
+            <button class="md:hidden material-symbols-outlined text-black p-2 hover:bg-stone-200 transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">menu</button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-[60] bg-white pt-24 px-6 pb-6 flex flex-col gap-6 font-['Space_Grotesk'] uppercase font-black text-2xl">
+        <a href="index.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">SHOP</a>
+        <a href="subscriptions.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">SUBSCRIPTIONS</a>
+        <a href="extraction.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">EXTRACTION</a>
+        <a href="locations.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">LOCATIONS</a>
+        <a href="profile.html" class="border-b-2 border-black/10 pb-2 hover:text-secondary">PROFILE</a>
+        <button class="absolute top-6 right-6 material-symbols-outlined text-3xl p-2 hover:bg-stone-200 transition-colors" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">close</button>
+    </div>
+
 
     <!-- Hero Section -->
     <header
